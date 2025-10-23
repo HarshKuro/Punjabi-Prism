@@ -1,0 +1,101 @@
+# Audio Files
+*.wav
+*.mp3
+*.m4a
+*.flac
+*.aac
+*.ogg
+*.wma
+*.au
+*.aiff
+*.aif
+*.aifc
+*.snd
+*.raw
+*.pcm
+*.opus
+
+# Audio Project Files
+*.audacity
+*.aup
+*.aup3
+*.logicx
+*.ptx
+*.ses
+*.reapeaks
+*.pkf
+
+# Audio Cache and Temporary Files
+*.tmp
+*.temp
+*~
+.DS_Store
+Thumbs.db
+*.log
+
+# Python Virtual Environment
+.venv/
+venv/
+env/
+ENV/
+.env
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# Output CSV Files (optional - remove if you want to track results)
+*.csv
+true_scores_*.csv
+punjabi_quality_scores_*.csv
+
+# Large Data Directories
+1m/
+F21m/
+F22m/
+F24m/
+F30m/
+M20m/
+old_files/
+
+# System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*~
+
+# Backup Files
+*.bak
+*.backup
+*.old
