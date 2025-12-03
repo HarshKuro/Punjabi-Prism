@@ -1,0 +1,9 @@
+{
+  "dataset_dir": ".",
+  "output_dir": "results",
+  "config_hash": "c569ffbdf9143971",
+  "config_version": "1.0.0",
+  "start_time": "2025-12-03T10:55:38.160099",
+  "n_workers": 4,
+  "total_jobs": 192
+}

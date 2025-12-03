@@ -1,0 +1,41 @@
+======================================================================
+AUDIO QUALITY ASSESSMENT REPORT
+Samsung Prism - Punjabi Speech Dataset
+======================================================================
+Generated: 2025-12-03 10:50:37
+
+DATASET OVERVIEW
+----------------------------------------
+Total files processed: 64
+Successful: 64
+Failed: 0
+Unique speakers: 1
+Distance range: 2m - 4m
+
+PESQ SCORES (ITU-T P.862)
+----------------------------------------
+Mean:   1.307
+Std:    0.064
+Min:    1.187
+Max:    1.448
+Median: 1.300
+
+PESQ by Distance:
+  2m: 1.325 ± 0.066 (n=32)
+  4m: 1.290 ± 0.059 (n=32)
+
+SNR (Global)
+----------------------------------------
+Mean:   -2.5 dB
+Std:    0.4 dB
+Min:    -3.1 dB
+Max:    -1.5 dB
+
+QUALITY ASSESSMENT
+----------------------------------------
+Excellent (≥4.0): 0 (0.0%)
+Good (3.0-4.0):   0 (0.0%)
+Fair (2.0-3.0):   0 (0.0%)
+Poor (<2.0):      64 (100.0%)
+
+======================================================================

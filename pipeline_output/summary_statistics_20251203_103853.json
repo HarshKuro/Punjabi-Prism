@@ -1,0 +1,24 @@
+{
+  "total_files": 64,
+  "successful": 0,
+  "failed": 64,
+  "pesq_by_distance": {
+    "2": {
+      "mean": NaN,
+      "std": NaN,
+      "count": 0
+    },
+    "4": {
+      "mean": NaN,
+      "std": NaN,
+      "count": 0
+    }
+  },
+  "pesq_by_speaker": {
+    "F2": {
+      "mean": NaN,
+      "std": NaN,
+      "count": 0
+    }
+  }
+}

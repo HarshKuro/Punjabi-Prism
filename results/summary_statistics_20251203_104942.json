@@ -1,0 +1,44 @@
+{
+  "total_files": 64,
+  "successful": 64,
+  "failed": 0,
+  "pesq_mean": 1.3072336707264185,
+  "pesq_std": 0.06444003071058614,
+  "pesq_min": 1.1870037317276,
+  "pesq_max": 1.4475562572479248,
+  "pesq_median": 1.3004612922668457,
+  "snr_global_db_mean": -2.5364981105697484,
+  "snr_global_db_std": 0.36678776489425596,
+  "snr_global_db_min": -3.144979136772773,
+  "snr_global_db_max": -1.5421740729366036,
+  "snr_global_db_median": -2.5234259532805217,
+  "snr_segmental_db_mean": -3.550153553070502,
+  "snr_segmental_db_std": 0.5194854452109054,
+  "snr_segmental_db_min": -4.5121314284377965,
+  "snr_segmental_db_max": -2.389831644469245,
+  "snr_segmental_db_median": -3.622026073164591,
+  "stoi_mean": 0.6661147854464999,
+  "stoi_std": 0.03438399254314292,
+  "stoi_min": 0.584346996085659,
+  "stoi_max": 0.7221640289659669,
+  "stoi_median": 0.6746233830137474,
+  "pesq_by_distance": {
+    "2": {
+      "mean": 1.324875582009554,
+      "std": 0.0660772781169805,
+      "count": 32
+    },
+    "4": {
+      "mean": 1.289591759443283,
+      "std": 0.05856813754792129,
+      "count": 32
+    }
+  },
+  "pesq_by_speaker": {
+    "F2": {
+      "mean": 1.3072336707264185,
+      "std": 0.06444003071058618,
+      "count": 64
+    }
+  }
+}
