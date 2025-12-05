@@ -1,0 +1,56 @@
+
+SAMSUNG PRISM PUNJABI SPEECH DATASET ANALYSIS
+==============================================
+Generated: 2025-12-05 10:49:33
+
+1. DATASET OVERVIEW
+-------------------
+- Bonafide (real comparisons): 253 samples
+- Spoofed-1: 668 samples  
+- Spoofed-2: 617 samples
+- Total Spoofed: 1285 samples
+
+2. QUALITY METRICS SUMMARY
+--------------------------
+                    Bonafide    Spoofed-1    Spoofed-2
+PESQ (mean)         1.301       1.160        1.150
+PESQ (std)          0.175       0.072        0.106
+STOI (mean)         0.577       0.471        0.353
+STOI (std)          0.181       0.140        0.115
+SNR (mean dB)       -2.53       -3.98        -4.14
+
+3. KEY FINDINGS
+---------------
+a) Spoofed-1 vs Spoofed-2:
+   - Spoofed-1 has higher PESQ (1.160 vs 1.150)
+   - Spoofed-1 has higher STOI (0.471 vs 0.353)
+   - Statistical significance: p = 0.000000 (significant)
+
+b) Bonafide vs Spoofed:
+   - PESQ degradation: 11.2%
+   - STOI degradation: 28.2%
+
+c) Best Recording Devices:
+   1. IP14p: PESQ = 1.201
+   2. IP16p: PESQ = 1.178
+   3. IP16: PESQ = 1.160
+
+4. SPOOF DETECTION RECOMMENDATIONS
+----------------------------------
+- PESQ threshold < 1.3: Detects 94.9% of spoofed, misses 43.5% bonafide
+- STOI threshold < 0.5: Detects 65.3% of spoofed, misses 24.1% bonafide
+
+5. OUTPUT FILES
+---------------
+- samsung_prism_results/summary_statistics.csv
+- samsung_prism_results/threshold_analysis.csv
+- samsung_prism_results/speaker_analysis.csv
+- samsung_prism_results/bonafide_results.csv
+- samsung_prism_results/spoofed1_results.csv
+- samsung_prism_results/spoofed2_results.csv
+- samsung_prism_results/all_spoofed_results.csv
+- samsung_prism_results/pesq_distribution.png
+- samsung_prism_results/boxplot_comparison.png
+- samsung_prism_results/heatmap_speaker_spoof.png
+- samsung_prism_results/device_comparison.png
+- samsung_prism_results/pesq_vs_stoi_scatter.png

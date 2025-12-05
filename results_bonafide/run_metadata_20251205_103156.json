@@ -1,0 +1,9 @@
+{
+  "dataset_dir": "Bonafide",
+  "output_dir": "results_bonafide",
+  "config_hash": "c569ffbdf9143971",
+  "config_version": "1.0.0",
+  "start_time": "2025-12-05T10:30:52.124497",
+  "n_workers": 4,
+  "total_jobs": 382
+}
