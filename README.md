@@ -387,20 +387,28 @@ Based on Samsung PRISM Punjabi dataset analysis:
 
 This software is **PROPRIETARY - ALL RIGHTS RESERVED**.
 
-This software and associated documentation files are the exclusive property of the author and Samsung PRISM research program.
+This software and associated documentation files are the exclusive property of the project owners and Samsung PRISM research program.
 
 - ❌ **No use permitted** - personal or commercial
 - ❌ **No modification** permitted
 - ❌ **No distribution** permitted
 - ❌ **No reverse engineering** permitted
 
+### 📬 Permission Request
+
+To use this software, you **MUST** obtain written permission from the project owners.
+
+**Contact:** Harsh Partap Jain - harshpartapjainsdg@gmail.com
+
 Unauthorized use, reproduction, or distribution is strictly prohibited and may result in legal action.
 
 See [LICENSE](LICENSE) for full terms.
 
-## 👥 Authors
+## 👥 Project Owners
 
-- **Harsh Jain** - [HarshKuro](https://github.com/HarshKuro)
+- **Harsh Partap Jain** - [HarshKuro](https://github.com/HarshKuro) - harshpartapjainsdg@gmail.com
+- **Gurkirat Singh**
+- **Ashmit Singh**
 
 ## 🙏 Acknowledgments
 
