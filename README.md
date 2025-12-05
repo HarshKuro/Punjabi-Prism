@@ -1,10 +1,15 @@
-# Samsung Prism - Punjabi Speech Quality Assessment Pipeline
+# Samsung PRISM - Punjabi Speech Quality Assessment Pipeline
 
-A production-grade audio quality assessment pipeline for the Samsung Prism Punjabi Speech Dataset. This tool computes industry-standard metrics (PESQ, SNR, STOI) to evaluate speech quality degradation across different recording distances and devices.
+⚠️ **PROPRIETARY SOFTWARE - ALL RIGHTS RESERVED** ⚠️
+
+A production-grade audio quality assessment pipeline for the Samsung PRISM Punjabi Speech Dataset. This tool computes industry-standard metrics (PESQ, SNR, STOI) to evaluate speech quality degradation, detect replay attacks (spoofing), and compare bonafide vs spoofed audio recordings.
 
 ## 🎯 Project Overview
 
-This pipeline was developed for **Samsung PRISM (Preparing and Inspiring Student Minds)** research program to analyze Punjabi speech recordings captured at various distances using different mobile devices.
+This pipeline was developed for **Samsung PRISM (Preparing and Inspiring Student Minds)** research program to analyze Punjabi speech recordings for:
+- Quality assessment across different distances and devices
+- **Spoof Detection** - Detecting replay attacks (Spoofed-1 vs Spoofed-2)
+- **Bonafide vs Spoofed** comparison for anti-spoofing research
 
 ### Key Features
 
@@ -15,6 +20,8 @@ This pipeline was developed for **Samsung PRISM (Preparing and Inspiring Student
 - **DTW Alignment** - Dynamic Time Warping for accurate audio synchronization
 - **Parallel Processing** - Multi-core batch processing for large datasets
 - **Comprehensive Reports** - CSV exports, heatmaps, and statistical analysis
+- **Spoofed vs Bonafide Analysis** - Compare genuine and replay attack audio
+- **Spoofed-1 vs Spoofed-2 Comparison** - Direct audio-to-audio spoof comparison
 
 ## 📁 Dataset Structure
 
@@ -154,6 +161,53 @@ results/
 
 ## 🔧 Advanced Usage
 
+### Bonafide Internal Analysis
+
+```bash
+# Run quality analysis on bonafide (genuine) recordings
+python run_pipeline.py --dataset ./Bonafide --output ./bonafide_results
+```
+
+### Spoofed vs Bonafide Comparison
+
+Compare spoofed (replay attack) audio against bonafide (genuine) recordings:
+
+```bash
+# Run spoofed vs bonafide analysis
+python run_spoofed_comparison.py
+```
+
+This script compares:
+- Spoofed-1 (first replay) vs Bonafide (genuine)
+- Spoofed-2 (second replay) vs Bonafide (genuine)
+
+### Spoofed-1 vs Spoofed-2 Direct Comparison
+
+Compare two types of spoofed audio directly (audio-to-audio):
+
+```bash
+# Run Spoof1 vs Spoof2 direct comparison
+python run_spoof1_vs_spoof2.py
+```
+
+Results show degradation between different replay attack levels.
+
+### Samsung PRISM Comprehensive Analysis
+
+Generate full statistical analysis with visualizations:
+
+```bash
+# Run comprehensive analysis (requires completed CSV results)
+python samsung_prism_analysis.py
+```
+
+Generates:
+- Statistical summaries
+- Box plots by category
+- Correlation matrices
+- Heatmaps by distance/speaker
+- Exported to `samsung_prism_analysis/` folder
+
 ### Generate Reports from Existing Results
 
 ```bash
@@ -252,17 +306,23 @@ See `requirements.txt` for complete list.
 
 ```
 Punjabi-Prism/
-├── run_pipeline.py          # Main entry point
+├── run_pipeline.py              # Main entry point (Bonafide analysis)
+├── run_spoofed_comparison.py    # Spoofed vs Bonafide comparison
+├── run_spoof1_vs_spoof2.py      # Spoof1 vs Spoof2 direct comparison
+├── samsung_prism_analysis.py    # Comprehensive statistical analysis
 ├── pipeline/
 │   ├── __init__.py
-│   ├── config.py            # Configuration and file parsing
-│   ├── preprocessing.py     # Audio preprocessing
-│   ├── alignment.py         # DTW alignment
-│   ├── metrics.py           # PESQ, SNR, STOI computation
-│   ├── orchestrator.py      # Pipeline orchestration
-│   └── reporting.py         # Visualization and reports
-├── F1/, F2/, F3/, M1/, M2/  # Audio data folders
-├── results/                  # Output directory
+│   ├── config.py                # Configuration and file parsing
+│   ├── preprocessing.py         # Audio preprocessing
+│   ├── alignment.py             # DTW alignment
+│   ├── metrics.py               # PESQ, SNR, STOI computation
+│   ├── orchestrator.py          # Pipeline orchestration
+│   └── reporting.py             # Visualization and reports
+├── Bonafide/                    # Genuine recordings (F1, F2, M1, M2...)
+├── Spoofed-1/                   # First-level replay attacks
+├── Spoofed-2/                   # Second-level replay attacks
+├── results/                     # Output directory
+├── LICENSE                      # Proprietary license
 ├── requirements.txt
 └── README.md
 ```
@@ -288,30 +348,55 @@ Punjabi-Prism/
 - **Speakers with no 0m**: Use minimum distance as reference
 - **Single-distance speakers**: Self-comparison for baseline metrics
 
-## 📈 Expected Results
+## 📈 Research Findings
 
-Based on Samsung Prism Punjabi dataset analysis:
+Based on Samsung PRISM Punjabi dataset analysis:
+
+### Bonafide Internal Quality
 
 | Distance | Avg PESQ | Avg SNR | Avg STOI |
 |----------|----------|---------|----------|
 | 0m (ref) | ~4.64 | ~70 dB | ~0.99 |
-| 1m | ~4.64 | ~70 dB | ~0.99 |
+| 1m | ~1.30 | ~2.8 dB | ~0.58 |
 | 2m | ~1.32 | ~-2.7 dB | ~0.68 |
 | 4m | ~1.29 | ~-2.4 dB | ~0.65 |
 
-> Lower scores at higher distances indicate expected quality degradation.
+### Spoofed vs Bonafide Results
+
+| Comparison | Avg PESQ | Avg STOI | Avg Correlation |
+|------------|----------|----------|-----------------|
+| Spoofed-1 vs Bonafide | ~1.15 | ~0.41 | ~0.17 |
+| Spoofed-2 vs Bonafide | ~1.15 | ~0.41 | ~0.17 |
+
+### Spoof1 vs Spoof2 Direct
+
+| Metric | Mean Value |
+|--------|------------|
+| PESQ | ~1.46 |
+| STOI | ~0.40 |
+| Correlation | ~0.27 |
+| SNR Global | ~-1.01 dB |
+
+> Lower scores at higher distances and in spoofed comparisons indicate expected quality degradation.
 
 ## 🤝 Contributing
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/new-metric`)
-3. Commit changes (`git commit -am 'Add new metric'`)
-4. Push to branch (`git push origin feature/new-metric`)
-5. Create Pull Request
+⚠️ **This is proprietary software.** Contributions are not accepted at this time.
 
 ## 📄 License
 
-This project is part of the Samsung PRISM research program.
+This software is **PROPRIETARY - ALL RIGHTS RESERVED**.
+
+This software and associated documentation files are the exclusive property of the author and Samsung PRISM research program.
+
+- ❌ **No use permitted** - personal or commercial
+- ❌ **No modification** permitted
+- ❌ **No distribution** permitted
+- ❌ **No reverse engineering** permitted
+
+Unauthorized use, reproduction, or distribution is strictly prohibited and may result in legal action.
+
+See [LICENSE](LICENSE) for full terms.
 
 ## 👥 Authors
 
