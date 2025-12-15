@@ -1,0 +1,47 @@
+================================================================================
+AUDIO FILE VALIDATION REPORT
+================================================================================
+Generated: 2025-12-15 11:09:24
+Base Path: C:\Users\Harsh Jain\Downloads\prism
+
+--------------------------------------------------------------------------------
+SUMMARY STATISTICS
+--------------------------------------------------------------------------------
+Total Files Scanned:    2075
+Playable Files:         2073 (99.9%)
+Unplayable Files:       2 (0.1%)
+Files Renamed:          3
+
+--------------------------------------------------------------------------------
+CATEGORY BREAKDOWN
+--------------------------------------------------------------------------------
+           playable       file_size_kb duration
+                sum count         mean     mean
+category                                       
+Bonafide        564   564       827.30     9.60
+F1_speaker       28    28       928.65    10.78
+F2_speaker       96    96       768.36     8.92
+F3_speaker       50    50      1111.52    12.90
+M2_speaker       50    50       685.05     7.95
+Spoofed        1285  1287       970.05    10.79
+
+--------------------------------------------------------------------------------
+UNPLAYABLE FILES (2 files)
+--------------------------------------------------------------------------------
+
+File: Spoofed\f1\Spoofed-1\1m IP 14 Plus\pa_S01_f2_female_IP14Pl_MBP15_1m_90_east_60db_1_S.m4a
+  Size: 48.80 KB
+  Error: 
+
+File: Spoofed\f1\Spoofed-1\1m IP 14 Plus\pa_S02_f2_female_IP14Pl_MBP15_1m_90_east_60db_1_S.m4a
+  Size: 44.25 KB
+  Error: 
+
+--------------------------------------------------------------------------------
+PLAYABLE FILES STATISTICS
+--------------------------------------------------------------------------------
+Average Duration:       10.36 seconds
+Min Duration:           3.05 seconds
+Max Duration:           23.23 seconds
+Average Sample Rate:    44100 Hz
+Average File Size:      918.74 KB
